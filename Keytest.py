@@ -19,44 +19,85 @@ class Linux():
 
     def Key_txt(self):
         
-        SpecialKey = ("RIGHTSHIFT","LEFTSHIFT","ESC","LEFTALT","RIGHTALT","NUMLOCK","LEFT","RIGHT","SYSRQT","LEFTMETA","INSERT","PREVIOUSSONG","NEXTSONG","PLAYPAUSE","VOLUMEDOWN","VOLLUMEUP","F5","UP","DOWN")
-
-        SpecialSymbols = {
-            "LEFTBRACE":"[",
-            "RIGHTBRACE":"]",
-            "MINUS": "-",
-            "EQUAL":"=",
-            "BACKSLASH" : "\\",
-            "SEMICOLON" : ";",
-            "APOSTROPHE" : "'",
-            "COMMA":",",
-            "DOT":".",
-            "SLASH":"/",
-            "GRAVE":"`",
-            
-            "KP1":"1",
-            "KP2":"2",
-            "KP3":"3",
-            "KP4":"4",
-            "KP5":"5",
-            "KP6":"6",
-            "KP7":"7",
-            "KP8":"8",
-            "KP9":"9",
-            "KP0":"0",
-            
-            "KPSLASH":"/",
-            "KPMINUS":"-",
-            "KPPLUS":"+",
-            "KPENTER":" ",
-            "KPDOT":".",
-            "KPASTERISK":"*", 
-            
-            "ENTER":"\n",
-            "SPACE":" ",
-            "TAB": "    "
-            }
         k = self.Key_Pressed()
+        print(k)
+        
+        if k[0] == "LEFTSHIFT" or k[0] == "RIGHTSHIFT" and k[1] == 0:
+            SpecialSymbols = {
+                "LEFTBRACE":"{",
+                "RIGHTBRACE":"}",
+                "MINUS": "_",
+                "EQUAL":"+",
+                "BACKSLASH" : "|",
+                "SEMICOLON" : ":",
+                "APOSTROPHE" : '"',
+                "COMMA":"<",
+                "DOT":">",
+                "SLASH":"?",
+                "GRAVE":"~",
+                
+                "KP1":"1",
+                "KP2":"2",
+                "KP3":"3",
+                "KP4":"4",
+                "KP5":"5",
+                "KP6":"6",
+                "KP7":"7",
+                "KP8":"8",
+                "KP9":"9",
+                "KP0":"0",
+                
+                "KPSLASH":"/",
+                "KPMINUS":"-",
+                "KPPLUS":"+",
+                "KPENTER":" ",
+                "KPDOT":".",
+                "KPASTERISK":"*", 
+                
+                "ENTER":"\n",
+                "SPACE":" ",
+                "TAB": "    "
+            }
+            SpecialKey = ("LEFTCTRL","CAPSLOCK","ESC","LEFTALT","RIGHTALT","NUMLOCK","LEFT","RIGHT","SYSRQT","LEFTMETA","INSERT","PREVIOUSSONG","NEXTSONG","PLAYPAUSE","VOLUMEDOWN","VOLLUMEUP","F5","UP","DOWN")
+            
+        else:
+            SpecialSymbols = {
+                "LEFTBRACE":"[",
+                "RIGHTBRACE":"]",
+                "MINUS": "-",
+                "EQUAL":"=",
+                "BACKSLASH" : "\\",
+                "SEMICOLON" : ";",
+                "APOSTROPHE" : "'",
+                "COMMA":",",
+                "DOT":".",
+                "SLASH":"/",
+                "GRAVE":"`",
+                
+                "KP1":"1",
+                "KP2":"2",
+                "KP3":"3",
+                "KP4":"4",
+                "KP5":"5",
+                "KP6":"6",
+                "KP7":"7",
+                "KP8":"8",
+                "KP9":"9",
+                "KP0":"0",
+                
+                "KPSLASH":"/",
+                "KPMINUS":"-",
+                "KPPLUS":"+",
+                "KPENTER":" ",
+                "KPDOT":".",
+                "KPASTERISK":"*", 
+                
+                "ENTER":"\n",
+                "SPACE":" ",
+                "TAB": "    "
+                }
+            SpecialKey = ("LEFTCTRL","CAPSLOCK","RIGHTSHIFT","LEFTSHIFT","ESC","LEFTALT","RIGHTALT","NUMLOCK","LEFT","RIGHT","SYSRQT","LEFTMETA","INSERT","PREVIOUSSONG","NEXTSONG","PLAYPAUSE","VOLUMEDOWN","VOLLUMEUP","F5","UP","DOWN")
+
         
         if k[1] !=1:
             k = k[0][4:]
